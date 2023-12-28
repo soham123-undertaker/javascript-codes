@@ -27,3 +27,4 @@ Jsuser.email = "spal56@gmail.com"  //way to change values
 Object.freeze(Jsuser)
 Jsuser.email = "spalchatgpt@gmail.com"
 console.log(Jsuser.email)
+

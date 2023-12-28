@@ -29,3 +29,4 @@ console.log(myCreatedDate.getTime()); //Returns the stored time value in millise
 
 //We can get the time in seconds also by diving it with 1000. But it may give time in decimal, so we wrap the time in Math.floor()
 console.log(Math.floor(Date.now()/1000));
+
