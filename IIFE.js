@@ -7,11 +7,13 @@
 //Sometimes there is pollution from global scopes, to remove that we use IIFE
 
 (function chai(){
+    //named IIFE
     console.log(`DB connected`);
 })();  //Always use a semicolon while using IIFE
 
 //Writing IIFE using arrow function
 (() => {
+    //simple IIFE
     console.log(`DB connected 2`);
 })();
 
