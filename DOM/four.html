@@ -30,7 +30,7 @@
 
     //Here we directly insert the text
 
-    //Let us now talk about editing the nodes
+    //Let us now talk about editing the nodes---we will edit second to MOJO
     const secondLang = document.querySelector("li:nth-child(2)") //selecting the 2nd child
     console.log(secondLang);
     secondLang.innerHTML = "Mojo"
@@ -44,7 +44,7 @@
     //We will replace the second node with the newly created node so we will use replaceWith()
     secondLang.replaceWith(newli);
 
-    //Lets see another way to edit
+    //Lets see another way to edit----We will edit first to typescript
     const firstLang = document.querySelector("li:first-child")
     firstLang.outerHTML = '<li>TypeSceipt</li>'
 
