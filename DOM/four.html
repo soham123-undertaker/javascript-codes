@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai aur code|DOM</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langname){
+        const li = document.createElement('li');
+        li.innerHTML = `${langname}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("python")
+    addLanguage("typescript")
+    //The above way is not optimized because to append a child js has to traverse the whole tree and reach leaf to append an element.
+
+    //Now we will see an optimized way to do the same
+    function addOptiLanguage(langName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langname))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage("goLang")
+
+    //Here we directly insert the text
+
+    //Let us now talk about editing the nodes
+    const secondLang = document.querySelector("li:nth-child(2)") //selecting the 2nd child
+    console.log(secondLang);
+    secondLang.innerHTML = "Mojo"
+
+    //Similarly the bove is not the optimised way
+    //let us see the optimised way. Here we will create a node
+    const newliv= document.createElement('li')
+    newli.textContent = "mojo"
+    //we can use textcontent also instead of appendchild.Not much difference is there
+    //still the value has not been added...we have to add it
+    //We will replace the second node with the newly created node so we will use replaceWith()
+    secondLang.replaceWith(newli);
+
+    //Lets see another way to edit
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>TypeSceipt</li>'
+
+    //Now lets see how we will remove
+    const lastlang = document.querySelector('li:last-child')
+    lastlang.remove()
+</script>
+</html>
