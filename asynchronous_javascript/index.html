@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai Aur Code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    //setTimeout() is a runtine function.It is available by the browser and not by Javascript. It executes the function after a given set interval
+    
+    // setTimeout(function(){
+    //     console.log("Soham");
+    // },5000)
+
+    //We can also pass the function as reference
+    const saySoham = function(){
+        console.log("Soham");
+    }
+
+    setTimeout(saySoham,3000);
+
+    const changeText = function(){
+        document.querySelector("h1").innerText = "BEST JS SERIES";
+    }
+
+    const changeVal = setTimeout(changeText,2000);
+
+    //clearTimeout():-It is used to stop the setTimeout function.If this function is executed before setTimeout(), then it will not be executed
+
+    //We want to stop the change of text to "BEST JS SERIES" when we click the button..Here the concept of both clearTimeout() and EventListener will be taken
+
+    document.querySelector("#stop").addEventListener('click',function(){
+        clearTimeout(changeVal)
+        console.log("Stopped");
+    })
+
+</script>
+</html>

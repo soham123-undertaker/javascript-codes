@@ -1,0 +1,26 @@
+->Javascript
+    |-> Synchronous
+    |->Asynchronous
+
+->Execution Context
+    |->execute one line of code at a time
+    -->each operation waits for the last one to complete before executing
+
+->Blocking code vs Non Blocking code
+    |                       |->Does not block execution
+ Block the flow 
+ of program
+
+             JS ENGINE                                          WEB API
+                 /\                                               DOM API
+                /  \                                             Settimeout
+               /    \                                             setinterval--------------
+              /      \                                            fetch()--               |
+             /        \                                                   |               |
+            /          \                                                  |promise   Register call stack   
+    Memory Heap    Call Stack                                             |              |
+                        |<---------------high priority------------ callback callback     |
+                        |                                                                |
+                        |                                                                |
+                        | <--Add to call Stack-----------callback,callback  <------------|
+                                                             task_queue
