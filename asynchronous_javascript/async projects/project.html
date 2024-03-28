@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- here we will do a followup project of two.html...The project is that the same thing that we have done in setInterval will now happen on the clicking of the start button and the setInterval will stop on clicking of the stop button -->
+
+    <h1>START AND STOP PROJECT</h1>
+    <button id="start">START</button>
+    <button id="stop">STOP</button>
+
+    <script>
+        const val_id = setInterval(function(){
+            console.log("Soham",Date.now());
+            //Date.now() tells the current date
+        },1000)
+        document.querySelector("#start").addEventListener('click',val_id);
+        document.querySelector("#stop").addEventListener('click',clearInterval(val_id));
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+        //setInterval() repeats the same work after a given time interval.
+
+        // setInterval(function(){
+        //     console.log("soham",Date.now());
+        // },1000)
+
+        //We can pass the function as reference also.
+        const sayDate = function(){
+            console.log("Soham",Date.now());
+            //Date.now() tells the current date
+        }
+
+        setInterval(sayDate,2000);
+
+        //setInterval() can take a third parameter also..
+        const sayDate1 = function(str){
+            console.log(str,Date.now());
+        }
+       const interval_id =  setInterval(sayDate1,1000,"hello");
+
+        //setInterval() goes on forever. Therefore to stop this we also have clearInterval().It takes the reference of setInterval() to perform its action
+
+        clearInterval(interval_id)
+        </script>
+</body>
+</html>

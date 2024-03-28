@@ -12,7 +12,8 @@
  of program
 
              JS ENGINE                                          WEB API
-                 /\                                               DOM API
+                 /\                                          =================== 
+                /  \                                               DOM API
                 /  \                                             Settimeout
                /    \                                             setinterval--------------
               /      \                                            fetch()--               |
